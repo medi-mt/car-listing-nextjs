@@ -3,8 +3,9 @@ import Loction from "../icons/Location"
 import Link from "next/link";
 
 function Card({ data }) {
-    console.log("kk");
+
     const { id, name, loction, price, year, model, image, distance } = data
+    
     return (
         <Link href={`/cars/${id}`}>
             <div className={style.container}>

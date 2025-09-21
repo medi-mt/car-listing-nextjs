@@ -3,7 +3,7 @@ import Back from "../icons/Back"
 import Card from "../module/Card"
 import styles from "./CarsList.module.css"
 
-function CarsList({ selectedCategory }) {
+function CarsList({ data }) {
 
     const router = useRouter()
 
@@ -18,7 +18,7 @@ function CarsList({ selectedCategory }) {
                 <p>back</p>
             </div>
             <div className={styles.cards}>
-                {selectedCategory.map((item) => (
+                {data.map((item) => (
                     <Card key={item.id} data={item}/>
                 ))}
             </div>
